@@ -30,19 +30,19 @@ export default function GetStarted() {
         <span className="gs-reveal font-mono text-xs text-signal tracking-widest uppercase">
           Get Started
         </span>
-        <h2 className="gs-reveal font-heading font-bold text-ink text-4xl sm:text-5xl md:text-7xl tracking-tight mt-4 mb-6">
+        <h2 className="gs-reveal font-heading font-bold text-offwhite text-4xl sm:text-5xl md:text-7xl tracking-tight mt-4 mb-6">
           Ready to{' '}
           <em className="font-drama not-italic text-signal">automate</em>?
         </h2>
-        <p className="gs-reveal font-heading text-ink/50 text-base md:text-xl max-w-lg mx-auto mb-10">
+        <p className="gs-reveal font-heading text-offwhite/50 text-base md:text-xl max-w-lg mx-auto mb-10">
           Let&apos;s map your workflows, find the friction, and build systems
           that run themselves.
         </p>
         <a
           href="#"
-          className="gs-reveal btn-magnetic inline-flex px-9 py-4 md:px-10 md:py-5 rounded-full bg-signal text-offwhite font-heading font-semibold text-sm md:text-base tracking-tight relative overflow-hidden"
+          className="gs-reveal btn-magnetic inline-flex px-9 py-4 md:px-10 md:py-5 rounded-full bg-beige text-ink font-heading font-semibold text-sm md:text-base tracking-tight relative overflow-hidden"
         >
-          <span className="btn-bg bg-ink rounded-full" />
+          <span className="btn-bg bg-offwhite rounded-full" />
           <span className="relative z-10">Book a Consultation</span>
         </a>
       </div>

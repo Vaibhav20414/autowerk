@@ -7,10 +7,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        paper: '#D4D4D8',
-        signal: '#22C55E',
+        paper: '#2A2A2E',
+        signal: '#A1A1AA',
+        beige: '#E8D8B7',
         offwhite: '#F4F4F5',
-        ink: '#18181B',
+        ink: '#09090B',
+        canvas: '#0F0F11',
+        surface: '#18181B',
       },
       fontFamily: {
         heading: ['"Space Grotesk"', 'sans-serif'],

@@ -10,12 +10,13 @@
 
 html {
   scroll-behavior: smooth;
+  color-scheme: dark;
 }
 
 body {
   font-family: 'Space Grotesk', sans-serif;
-  background: #F5F3EE;
-  color: #111111;
+  background: #0F0F11;
+  color: #F4F4F5;
   overflow-x: hidden;
 }
 

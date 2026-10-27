@@ -1,16 +1,30 @@
-# React + Vite
+# AUTOWERK
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+AUTOWERK is an automation engineering studio. We build automated systems that remove operational friction for modern businesses: workflow automation, custom integrations and AI agents that run themselves.
 
-Currently, two official plugins are available:
+This repository is the studio's website, a dark, cinematic single-page site that shows what we build and how we work.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## What's on the site
 
-## React Compiler
+- **Hero:** an interactive, physics-based workflow graph that reacts to the cursor.
+- **What we build:** live micro-UIs for workflow automation, custom integrations and process optimization.
+- **Case studies:** a page per project with the problem, outcomes, architecture diagrams and stack. The first is the Dental Agent, a WhatsApp AI agent that qualifies implant enquiries and books consultations.
+- **Process:** a scroll-stacked Audit, Architect, Deploy walkthrough.
+- **Contact:** a call-to-action to book a consultation.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Stack
 
-## Expanding the ESLint configuration
+React 19, Vite, Tailwind CSS 3, GSAP (with ScrollTrigger), React Router and Lucide icons.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Run locally
+
+```bash
+npm install
+npm run dev      # start the dev server
+npm run build    # production build into dist/
+npm run lint     # lint the source
+```
+
+## Adding a case study
+
+Add an entry to `src/data/caseStudies.js`. It appears on the home page and gets its own page at `/case-studies/<slug>`. If it needs a diagram, add a component in `src/components/diagrams/` and register it in `src/components/CaseStudyPage.jsx`.

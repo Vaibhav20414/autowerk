@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
+import HeroGraph from './HeroGraph';
 
 export default function Hero() {
   const heroRef = useRef(null);
@@ -27,14 +28,11 @@ export default function Hero() {
       ref={heroRef}
       className="relative h-[100dvh] flex items-end overflow-hidden"
     >
-      {/* Background image + gradient */}
-      <div className="absolute inset-0">
-        <img
-          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80"
-          alt=""
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/70 to-ink/20" />
+      {/* Animated workflow graph */}
+      <div className="absolute inset-0 bg-canvas">
+        <HeroGraph />
+        <div className="absolute inset-0 bg-gradient-to-t from-canvas via-canvas/40 to-transparent" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_85%,rgba(15,15,17,0.85),transparent_60%)]" />
       </div>
 
       {/* Content — bottom-left third */}
@@ -52,16 +50,14 @@ export default function Hero() {
         <div className="flex flex-wrap gap-4">
           <a
             href="#work"
-            className="group hero-cta btn-magnetic px-7 py-3.5 sm:px-8 sm:py-4 rounded-full bg-signal text-offwhite font-heading font-semibold text-sm tracking-tight relative overflow-hidden"
+            className="hero-cta btn-magnetic px-7 py-3.5 sm:px-8 sm:py-4 rounded-full bg-beige text-ink font-heading font-semibold text-sm tracking-tight relative overflow-hidden"
           >
             <span className="btn-bg bg-offwhite rounded-full" />
-            <span className="relative z-10 group-hover:text-ink transition-colors duration-300">
-              See My Work
-            </span>
+            <span className="relative z-10">See My Work</span>
           </a>
           <a
             href="#contact"
-            className="hero-cta btn-magnetic px-7 py-3.5 sm:px-8 sm:py-4 rounded-full border border-offwhite/30 text-offwhite font-heading font-semibold text-sm tracking-tight hover:border-offwhite/60 transition-colors"
+            className="hero-cta btn-magnetic px-7 py-3.5 sm:px-8 sm:py-4 rounded-full border border-offwhite/30 text-offwhite font-heading font-semibold text-sm tracking-tight hover:border-beige hover:text-beige transition-colors"
           >
             Book a Consultation
           </a>

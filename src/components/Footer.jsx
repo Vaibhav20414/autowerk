@@ -1,6 +1,13 @@
+import { Link } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
 
-const navLinks = ['Work', 'Process', 'About', 'Contact'];
+const navLinks = [
+  { label: 'Work', to: '/#work' },
+  { label: 'Case Studies', to: '/#case-studies' },
+  { label: 'Process', to: '/#process' },
+  { label: 'About', to: '/#about' },
+  { label: 'Contact', to: '/#contact' },
+];
 const socialLinks = ['LinkedIn', 'GitHub', 'Twitter'];
 
 export default function Footer() {
@@ -25,14 +32,14 @@ export default function Footer() {
           </h4>
           <ul className="space-y-2.5">
             {navLinks.map((link) => (
-              <li key={link}>
-                <a
-                  href={`#${link.toLowerCase()}`}
+              <li key={link.label}>
+                <Link
+                  to={link.to}
                   className="font-heading text-offwhite/40 text-sm hover:text-offwhite hover-lift inline-flex items-center gap-1 transition-colors"
                 >
-                  {link}
+                  {link.label}
                   <ArrowUpRight size={11} />
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -62,7 +69,7 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-offwhite/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4">
         <div className="flex items-center gap-2">
-          <span className="w-1.5 h-1.5 rounded-full bg-green-500 pulse-dot" />
+          <span className="w-1.5 h-1.5 rounded-full bg-signal pulse-dot" />
           <span className="font-mono text-[11px] text-offwhite/25">
             System Operational
           </span>

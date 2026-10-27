@@ -24,14 +24,14 @@ function DiagnosticShuffler() {
   }, []);
 
   return (
-    <div className="bg-offwhite border border-paper rounded-[2rem] p-6 sm:p-8 shadow-sm h-full">
+    <div className="bg-surface border border-paper rounded-[2rem] p-6 sm:p-8 shadow-sm h-full">
       <div className="flex items-center gap-2 mb-2">
         <Zap size={18} className="text-signal" />
-        <span className="font-heading font-semibold text-ink text-sm tracking-tight">
+        <span className="font-heading font-semibold text-offwhite text-sm tracking-tight">
           Workflow Automation
         </span>
       </div>
-      <p className="font-heading text-ink/50 text-sm mb-8">
+      <p className="font-heading text-offwhite/50 text-sm mb-8">
         Intelligent task routing and queue management that runs 24/7.
       </p>
 
@@ -39,7 +39,7 @@ function DiagnosticShuffler() {
         {order.map((cardIdx, stackPos) => (
           <div
             key={cardIdx}
-            className="absolute left-0 right-0 bg-white rounded-xl p-4 border border-paper/80"
+            className="absolute left-0 right-0 bg-canvas rounded-xl p-4 border border-paper"
             style={{
               top: stackPos * 14,
               zIndex: 3 - stackPos,
@@ -50,7 +50,7 @@ function DiagnosticShuffler() {
             }}
           >
             <div className="flex items-center justify-between">
-              <span className="font-mono text-xs text-ink/60">
+              <span className="font-mono text-xs text-offwhite/60">
                 {subLabels[cardIdx]}
               </span>
               <span className="text-[10px] font-mono text-signal font-bold tracking-wider">
@@ -59,7 +59,7 @@ function DiagnosticShuffler() {
             </div>
             <div className="mt-3 h-1.5 bg-paper rounded-full overflow-hidden">
               <div
-                className="h-full bg-signal/40 rounded-full transition-all duration-1000"
+                className="h-full bg-signal/60 rounded-full transition-all duration-1000"
                 style={{ width: `${55 + cardIdx * 18}%` }}
               />
             </div>
@@ -107,14 +107,14 @@ function TelemetryTypewriter() {
   }, [charIdx, msgIdx]);
 
   return (
-    <div className="bg-offwhite border border-paper rounded-[2rem] p-6 sm:p-8 shadow-sm h-full">
+    <div className="bg-surface border border-paper rounded-[2rem] p-6 sm:p-8 shadow-sm h-full">
       <div className="flex items-center gap-2 mb-2">
         <Link2 size={18} className="text-signal" />
-        <span className="font-heading font-semibold text-ink text-sm tracking-tight">
+        <span className="font-heading font-semibold text-offwhite text-sm tracking-tight">
           Custom Integrations
         </span>
       </div>
-      <p className="font-heading text-ink/50 text-sm mb-4">
+      <p className="font-heading text-offwhite/50 text-sm mb-4">
         Connecting your tools into a unified, real-time data pipeline.
       </p>
 
@@ -189,14 +189,14 @@ function CursorScheduler() {
   }, [activeDays]);
 
   return (
-    <div className="bg-offwhite border border-paper rounded-[2rem] p-6 sm:p-8 shadow-sm h-full">
+    <div className="bg-surface border border-paper rounded-[2rem] p-6 sm:p-8 shadow-sm h-full">
       <div className="flex items-center gap-2 mb-2">
         <Settings size={18} className="text-signal" />
-        <span className="font-heading font-semibold text-ink text-sm tracking-tight">
+        <span className="font-heading font-semibold text-offwhite text-sm tracking-tight">
           Process Optimization
         </span>
       </div>
-      <p className="font-heading text-ink/50 text-sm mb-8">
+      <p className="font-heading text-offwhite/50 text-sm mb-8">
         Streamlined scheduling and resource allocation that adapts in real-time.
       </p>
 
@@ -207,8 +207,8 @@ function CursorScheduler() {
               key={i}
               className={`w-8 h-8 rounded-lg flex items-center justify-center text-xs font-mono transition-all duration-300 ${
                 activeDays.includes(i)
-                  ? 'bg-signal text-offwhite'
-                  : 'bg-paper text-ink/40'
+                  ? 'bg-beige text-ink'
+                  : 'bg-paper text-offwhite/40'
               } ${pressing === i ? 'scale-90' : ''}`}
             >
               {day}
@@ -216,7 +216,7 @@ function CursorScheduler() {
           ))}
         </div>
 
-        <div className="inline-flex px-4 py-2 rounded-lg bg-ink text-offwhite font-mono text-xs tracking-wide">
+        <div className="inline-flex px-4 py-2 rounded-lg bg-offwhite text-ink font-mono text-xs tracking-wide">
           Save Protocol
         </div>
 
@@ -237,8 +237,8 @@ function CursorScheduler() {
         >
           <path
             d="M5 3l14 8-6 2-4 7-4-17z"
-            fill="#111"
-            stroke="#111"
+            fill="#F4F4F5"
+            stroke="#09090B"
             strokeWidth="1"
           />
         </svg>
@@ -276,7 +276,7 @@ export default function Features() {
         <span className="font-mono text-xs text-signal tracking-widest uppercase">
           What I Build
         </span>
-        <h2 className="font-heading font-bold text-ink text-3xl md:text-5xl tracking-tight mt-3">
+        <h2 className="font-heading font-bold text-offwhite text-3xl md:text-5xl tracking-tight mt-3">
           Functional Artifacts
         </h2>
       </div>
